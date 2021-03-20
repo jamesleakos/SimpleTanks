@@ -30,6 +30,7 @@ namespace TanksMP
 
         void Start()
         {
+            Debug.Log("NetworkListServer.Start");
             connector = GetComponent<ApiConnector>();
             connector.ListServer.ClientApi.onServerListUpdated += UpdateList;
 
@@ -40,6 +41,7 @@ namespace TanksMP
 
         private void UpdateList(ServerCollectionJson serverCollection)
         {
+            Debug.Log("NetworkListServer.UpdateList");
             list = serverCollection;
         }
 
@@ -50,6 +52,7 @@ namespace TanksMP
         /// </summary>
         public static void AddServer()
         {
+            Debug.Log("NetworkListServer.AddServer");
             Transport transport = Transport.activeTransport;
 
             string gameMode = PlayerPrefs.GetInt(PrefsKeys.gameMode).ToString();
@@ -73,6 +76,8 @@ namespace TanksMP
         /// </summary>
         public static void GetServers()
         {
+            Debug.Log("NetworkListServer.GetServers");
+
             connector.ListServer.ClientApi.GetServerList();
         }
 
@@ -82,6 +87,8 @@ namespace TanksMP
         /// </summary>
         public static void RemoveServer()
         {
+            Debug.Log("NetworkListServer.RemoveServer");
+
             if (!connector.ListServer.ServerApi.ServerInList)
                 return;
 
@@ -95,6 +102,8 @@ namespace TanksMP
         /// </summary>
         public static void UpdatePlayerCount(int playerCount)
         {
+            Debug.Log("NetworkListServer.UpdatePlayerCount");
+
             if (!connector.ListServer.ServerApi.ServerInList)
                 return;
 
@@ -108,6 +117,8 @@ namespace TanksMP
         /// </summary>
         public static string FindGame()
         {
+            Debug.Log("NetworkListServer.FindGame - important one. Can modify this to control matchmaking.");
+
             string gameMode = PlayerPrefs.GetInt(PrefsKeys.gameMode).ToString();
 
             if (list.servers == null)

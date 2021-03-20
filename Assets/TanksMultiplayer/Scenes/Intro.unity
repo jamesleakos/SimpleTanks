@@ -909,11 +909,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadingWindow: {fileID: 1516152654}
   connectionErrorWindow: {fileID: 1466157128}
-  billingErrorWindow: {fileID: 488840660}
   nameField: {fileID: 1388582011}
   networkDrop: {fileID: 2013689020}
-  gameModeDrop: {fileID: 1373282608}
-  serverField: {fileID: 632891843}
   musicToggle: {fileID: 2098734082}
   volumeSlider: {fileID: 1218799830}
 --- !u!4 &96511439
@@ -2810,13 +2807,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cd5ef32e73ceec4d8cd66c5e022d918, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buyable: 1
-  id: tank_silv
-  value: 1
-  buyButton: {fileID: 2057172010}
-  sold: {fileID: 797420570}
-  selectButton: {fileID: 1150113224}
-  selected: {fileID: 307331156}
 --- !u!1 &483856865
 GameObject:
   m_ObjectHideFlags: 0
@@ -4924,6 +4914,11 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012352245564, guid: a32e604ef2b6ef44aba370e493eff18b,
+        type: 3}
+      propertyPath: onlineScene
+      value: Assets/TanksMultiplayer/Scenes/TDM_Game.unity
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a32e604ef2b6ef44aba370e493eff18b, type: 3}
 --- !u!1 &800515012
@@ -6025,13 +6020,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cd5ef32e73ceec4d8cd66c5e022d918, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buyable: 0
-  id: tank_free
-  value: 0
-  buyButton: {fileID: 39279209}
-  sold: {fileID: 0}
-  selectButton: {fileID: 1870982997}
-  selected: {fileID: 1683937323}
 --- !u!1 &1121397443
 GameObject:
   m_ObjectHideFlags: 0
@@ -8678,13 +8666,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cd5ef32e73ceec4d8cd66c5e022d918, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buyable: 1
-  id: tank_gold
-  value: 2
-  buyButton: {fileID: 1805896300}
-  sold: {fileID: 216810740}
-  selectButton: {fileID: 754373823}
-  selected: {fileID: 555153803}
 --- !u!1 &1508672085
 GameObject:
   m_ObjectHideFlags: 0

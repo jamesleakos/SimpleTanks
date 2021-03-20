@@ -63,21 +63,6 @@ namespace TanksMP
 			//wait until the network is ready
             while (GameManager.GetInstance() == null || GameManager.GetInstance().localPlayer == null)
                 yield return null;
-
-            //on non-mobile devices hide joystick controls, except in editor
-            #if !UNITY_EDITOR && (UNITY_STANDALONE || UNITY_WEBGL)
-                ToggleControls(false);
-            #endif
-        
-            //on mobile devices enable additional aiming indicator
-            #if !UNITY_EDITOR && !UNITY_STANDALONE && !UNITY_WEBGL
-            if (aimIndicator != null)
-            {
-                Transform indicator = Instantiate(aimIndicator).transform;
-                indicator.SetParent(GameManager.GetInstance().localPlayer.shotPos);
-                indicator.localPosition = new Vector3(0f, 0f, 3f);
-            }
-            #endif
         }
         
 
